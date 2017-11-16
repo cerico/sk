@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getRates } from '../actions/currency';
+import { Rates } from './Rates.js';
 
 class App extends React.Component {
 
@@ -28,7 +29,7 @@ class App extends React.Component {
           BASE: {this.props.base}
         </div>
         <div style={style.right}>
-          RATES
+          <Rates rates={this.props.rates}/> 
         </div>
       </div>
     );
