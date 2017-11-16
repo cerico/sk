@@ -1,7 +1,6 @@
 const initUrl = 'http://api.fixer.io/latest?base='
 
 export const getRates = (base = 'GBP', amount = 1, target = 'AUD') => {
-  console.log('amount',amount)
     return dispatch => {
       return fetch(`${initUrl}${base}`)
       .then(response => response.json())
