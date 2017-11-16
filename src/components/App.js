@@ -9,9 +9,27 @@ class App extends React.Component {
   }
 
   render () {
+
+    const style = {
+      left: {
+        width:'50%',
+        float:'left',
+        textAlign:'center'
+      },
+      right: {
+        width:'50%',
+        float:'right',
+        textAlign:'center'
+      }
+    }
     return (
       <div>
+        <div style={style.left}>
           BASE: {this.props.base}
+        </div>
+        <div style={style.right}>
+          RATES
+        </div>
       </div>
     );
   }
