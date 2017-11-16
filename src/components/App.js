@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { getRates } from '../actions/currency';
 import { Rates } from './Rates.js';
+import  Chooser from './Chooser.js'
 
 class App extends React.Component {
 
@@ -26,7 +27,9 @@ class App extends React.Component {
     return (
       <div>
         <div style={style.left}>
-          BASE: {this.props.base}
+          {this.props.rates ?
+          <Chooser rates={this.props.rates} />
+          : null}
         </div>
         <div style={style.right}>
           <Rates rates={this.props.rates}/> 
