@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { getRates } from '../actions/currency';
 import { Rates } from './Rates.js';
 import  Chooser from './Chooser.js'
+import  Result from './Result.js'
 
 class App extends React.Component {
 
@@ -25,12 +26,13 @@ class App extends React.Component {
       }
     }
     return (
-      <div>
+      <div> {this.props.rates ? 
         <div style={style.left}>
-          {this.props.rates ?
+          
           <Chooser rates={this.props.rates} />
-          : null}
+          <Result result={this.props}/>
         </div>
+        : null}
         <div style={style.right}>
           <Rates rates={this.props.rates}/> 
         </div>
