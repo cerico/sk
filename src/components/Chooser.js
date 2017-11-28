@@ -34,6 +34,8 @@ class Chooser extends React.Component {
     }
   
     render() {
+
+      const options = Object.entries(this.props.rates.rates).map(([k,v]) => <option key={k}>{k}</option>) 
       const style = {
         row:{marginBottom:'50px'}
       }
@@ -44,14 +46,14 @@ class Chooser extends React.Component {
               <span>base</span>
               <select onChange={this.handleBase} className="ui selection dropdown">
                 <option key="g">{this.props.rates.base}</option>
-                {Object.entries(this.props.rates.rates).map(([k,v]) => <option key={k}>{k}</option>) }
+                  {options}
               </select>
             </div>
             
             <div style={style.row}>
               <span>target</span>
               <select onChange={this.handleTarget} className="ui selection dropdown" >
-                {Object.entries(this.props.rates.rates).map(([k,v]) => <option key={k}>{k}</option>) }
+                  {options}
               </select>
             </div>
   
