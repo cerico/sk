@@ -33,9 +33,7 @@ class App extends React.Component {
           <Chooser rates={this.props.rates} />
           <Result result={this.props}/>
           <Refactor/>
-        </div>
-       
-        
+        </div>       
         <div style={style.right}>
           <Rates rates={this.props.rates.rates}/> 
         </div>
