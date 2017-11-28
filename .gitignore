@@ -1,4 +1,4 @@
-mnode_modules
+enode_modules
 /dist/*
 dist/*
 package-lock.json
