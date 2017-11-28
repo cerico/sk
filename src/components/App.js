@@ -28,15 +28,19 @@ class App extends React.Component {
     }
     return (
       <div> {this.props.rates ? 
+        <div>
         <div style={style.left}>         
           <Chooser rates={this.props.rates} />
           <Result result={this.props}/>
           <Refactor/>
         </div>
-        : null}
+       
+        
         <div style={style.right}>
           <Rates rates={this.props.rates.rates}/> 
         </div>
+        </div>
+        : null} 
       </div>
     );
   }
