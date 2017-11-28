@@ -33,6 +33,7 @@
     "sass-loader": "^6.0.3",
     "semantic-ui-css": "^2.2.12",
     "style-loader": "0.18.2",
+    "uglify-js": "^3.2.0",
     "url-loader": "0.5.9",
     "webpack": "3.5.1",
     "webpack-dev-server": "2.8.2"
