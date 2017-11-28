@@ -13,9 +13,9 @@ export const Rates = ({rates}) => {
   return (
     rates ? 
       <ul style={style.listStyle}>
-        {Object.entries(rates.rates).map(([k,v]) => <li key={k}>{k} is {v}</li>)} 
+        {Object.entries(rates).map(([k,v]) => <li key={k}>{k} is {v}</li>)} 
       </ul>
-      : null
+      : <div>no</div>
   );
 }
 

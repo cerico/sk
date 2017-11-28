@@ -35,7 +35,7 @@ class App extends React.Component {
         </div>
         : null}
         <div style={style.right}>
-          <Rates rates={this.props.rates}/> 
+          <Rates rates={this.props.rates.rates}/> 
         </div>
       </div>
     );
